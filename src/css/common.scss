@@ -1,0 +1,388 @@
+
+@import "./mixin";
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-weight: normal;
+    font-family:PingFangSC-Regular ;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+    &:hover{
+        outline: none;
+    }
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+    background-color: #ffffff;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"], input[type="text"] {
+    -webkit-appearance: none;
+  outline: none;
+}
+
+textarea { -webkit-appearance: none;}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+
+
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear{
+    zoom:1;
+}
+
+.back_img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.margin{
+    margin: 0 auto;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    position: relative;
+    float: right;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.paddingTop{
+    padding-top: 1.95rem;
+}
+
+@keyframes backOpacity{
+   0%   { opacity: 1 }
+   25%  { opacity: .5 }
+   50%  { opacity: 1 }
+   75%  { opacity: .5 }
+   100% { opacity: 1 }
+}
+
+.animation_opactiy{
+    animation: backOpacity 2s ease-in-out infinite;
+}
+.mt10{
+  margin-top: 10px;
+}
+.mt16{
+  margin-top: 16px;
+}
+.mt18{
+  margin-top: 18px;
+}
+.mb18{
+  margin-bottom: 18px;
+}
+.mt20{
+  margin-top: 20px;
+}
+.mt30{
+   margin-top: 30px;
+ }
+.mb30{
+  margin-bottom: 30px;
+}
+.ml4{
+  margin-left: 4px;
+}
+.tc{
+  text-align: center;
+}
+.hc{
+  margin: 0 auto;
+}
+.pl6{
+  padding-left: 6px;
+}
+.pl25{
+  padding-left: 25px;
+}
+.pl8{
+  padding-left:8px ;
+}
+.ph16{
+  padding: 0px 16px;
+}
+.ph15{
+  padding: 0px 15px;
+}
+.fw500{
+    font-weight: 500;
+}
+.m-btn{
+    display: inline-block;
+    width: 160px;
+    height: 68px;
+    //background-color: $c2;
+}
+.m-btn-inactive{
+    display: inline-block;
+    width: 160px;
+    height: 68px;
+    //background-color: $c4;
+}
+.btn-bdr{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.icon{
+    width: 48px;
+    height: 48px;
+    color: #333333;
+    vertical-align: middle;
+    fill: currentColor;
+    overflow: hidden;
+}
+.menu-fixed{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+.m-tl{
+  text-align: left;
+}
+.active{
+  fill:#FB2A35;
+  stroke: #FB2A35;
+}
+.pointer {
+  cursor: pointer;
+}
+/*颜色*/
+.co-1{
+  color: #FFFFFF;
+}
+.co-2{
+  color: #AEAAE8;
+}
+
+.fs-34{
+  font-size: 68px;
+}
+.fs-19{
+  font-size: 38px;
+}
+.fs-18 {
+  font-size: 36px;
+}
+.fs-13{
+  font-size: 26px;
+}
+.fs-11{
+  font-size: 22px;
+}
+.fs-15{
+  font-size: 30px;
+}
+/*按钮*/
+
+.btn-1{
+  width: 400px;
+  height: 90px;
+  line-height: 90px;
+  vertical-align: middle;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 45px;
+}
+.btn-2{
+  width: 590px;
+  height: 88px;
+  background: rgba(0, 160, 233, 1);
+  border-radius: 44px;
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-top: 50px;
+}
+.btn-3{
+  position: relative;
+  right: -200px;
+  top: 25px;
+  width: 180px;
+  height: 64px;
+  background: rgba(0, 160, 233, 1);
+  border-radius: 32px;
+  color: #FFFFFF;
+}
+.btn-4{
+  width: 100px;
+  height: 44px;
+  border: 2px solid rgba(0, 160, 233, 1);
+  border-radius: 22px;
+  background-color: transparent;
+  line-height: 44px;
+  vertical-align: middle;
+}
+/*水平居中*/
+.tc{
+  text-align: center;
+}
+.hc-1{
+  margin: 0 auto;
+}
+.flex-vh{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mt-80{
+  margin-top: 80px;
+}
+.mt-85{
+  margin-top: 85px;
+}
+.mt-30{
+  margin-top: 30px;
+}
+.mt-60{
+  margin-top: 60px;
+}
+.mt-67{
+  margin-top: 67px;
+}
+.ml-78{
+  margin-left: 78px;
+}
+.mm-icon{
+  display: block;
+  width: 40px;
+  height: 36px;
+}
+.h-118{
+  height: 118px;
+}
+/*宽高*/
+.wh-1{
+  width: 24px;
+  height: 24px;
+}
+
+.right {
+  width: 600px;
+  padding-right: 82px;
+  input {
+    font-size: 30px;
+    width: 100%;
+    height: 80px;
+    padding-right: 20px;
+    border: none;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(134, 165, 212, 1);
+    padding-left: 10px;
+    color: #FFFFFF;
+    background-color: initial;
+
+  }
+}
+
+.logo,.img-2{
+  width: 184px;
+  height: 98px;
+  margin: 50px auto 30px auto;
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+input{
+  &::-webkit-input-placeholder {
+    color: #ADD8E6;
+    position: relative;
+    left: 0px;
+  }
+}
+.register,.login {
+  padding-top: 68px;
+  background-color: #0A3880;
+  height: 100%;
+  background-image: url('../../src/assets/reg-bg@2x.png');
+  background-repeat: no-repeat;
+  /*-webkit-background-size: contain;
+   background-size: contain;*/
+  background-size: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.register {
+
+}
+.ph-40{
+  padding: 0px 40px ;
+}
+
+.bgc-1{
+  background-color: #222A77;
+}
+.fw-bold{
+  font-weight: bold;
+}
+.lh-60{
+  line-height: 60px;
+}
+.pb-60{
+  padding-bottom: 60px;
+}
+.btn-5{
+  position: relative;
+  right: -170px;
+  top: -90px;
+  width: 180px;
+  height: 64px;
+  background: rgba(0, 160, 233, 1);
+  border-radius: 32px;
+  color: #FFFFFF;
+}
